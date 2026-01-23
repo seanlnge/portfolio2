@@ -4,22 +4,16 @@ title: Imgscrpr
 description: Discord bot that curates Reddit media feeds.
 ---
 
+## Overview
+
+Imgscrpr is a Discord bot that builds a personalized Reddit feed using a subreddit-relationship graph. It delivers curated media directly inside Discord.
+
 ![Imgscrpr preview](/images/imgscrpr.png)
 
 ## Links
 
-- Live: [top.gg/bot/904018497657532447](https://top.gg/bot/904018497657532447)
-- Code: [github.com/seanlnge/imgscrpr](https://github.com/seanlnge/imgscrpr/tree/master)
-
-## Tools
-
-- TypeScript
-- Node.js
-- MongoDB
-
-## Overview
-
-Imgscrpr is a Discord bot that builds a personalized Reddit feed using a subreddit-relationship graph. It delivers curated media directly inside Discord.
+- [Product](https://top.gg/bot/904018497657532447)
+- [GitHub Repository](https://github.com/seanlnge/imgscrpr/tree/master)
 
 ## Problem
 

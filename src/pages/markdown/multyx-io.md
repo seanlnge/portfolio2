@@ -4,27 +4,16 @@ title: Multyx.io
 description: Multiplayer game development platform for real-time hosting.
 ---
 
+## Overview
+
+Multyx.io is a multiplayer game development platform that removes the hardest parts of networking and infrastructure. It combines a typed AST editor with ECS hosting on AWS and automated provisioning to help teams ship real-time games faster.
+
 ![Multyx.io product preview](/images/multyx.png)
 
 ## Links
 
-- Live: [multyx.io](https://multyx.io)
-- Code (private): [github.com/seanlnge](https://github.com/seanlnge)
-
-## Tools
-
-- TypeScript
-- Next.js
-- AWS (ECS, Step Functions)
-- Docker
-- Postgres
-- Redis
-- WebSockets
-- Tailwind CSS
-
-## Overview
-
-Multyx.io is a multiplayer game development platform that removes the hardest parts of networking and infrastructure. It combines a typed AST editor with ECS hosting on AWS and automated provisioning to help teams ship real-time games faster.
+- [Live Product](https://multyx.io)
+- Private Repository
 
 ## Problem
 

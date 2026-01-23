@@ -5,6 +5,11 @@ import {
   SiExpress,
   SiGithubactions,
   SiGit,
+  SiGooglecloud,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiHeroku,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
@@ -16,7 +21,7 @@ import {
   SiTypescript,
   SiTailwindcss,
 } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaRobot, FaPaintBrush, FaSuperscript } from "react-icons/fa";
 
 type ToolItem = {
   id: string;
@@ -36,12 +41,25 @@ const toolMap: Record<string, ToolItem> = {
   ws: { id: "ws", name: "WebSockets", Icon: SiSocketdotio, colorClass: "text-sky-300" },
   tailwind: { id: "tailwind", name: "Tailwind CSS", Icon: SiTailwindcss, colorClass: "text-cyan-300" },
   aws: { id: "aws", name: "AWS", Icon: FaAws, colorClass: "text-amber-400" },
+  "google-cloud": {
+    id: "google-cloud",
+    name: "Google Cloud",
+    Icon: SiGooglecloud,
+    colorClass: "text-blue-300",
+  },
   docker: { id: "docker", name: "Docker", Icon: SiDocker, colorClass: "text-sky-400" },
   cicd: { id: "cicd", name: "CI/CD", Icon: SiGithubactions, colorClass: "text-violet-300" },
   postgres: { id: "postgres", name: "PostgreSQL", Icon: SiPostgresql, colorClass: "text-indigo-300" },
   redis: { id: "redis", name: "Redis", Icon: SiRedis, colorClass: "text-rose-300" },
   mongo: { id: "mongo", name: "MongoDB", Icon: SiMongodb, colorClass: "text-emerald-300" },
   git: { id: "git", name: "Git", Icon: SiGit, colorClass: "text-orange-300" },
+  ai: { id: "ai", name: "AI", Icon: FaRobot, colorClass: "text-fuchsia-300" },
+  html: { id: "html", name: "HTML", Icon: SiHtml5, colorClass: "text-orange-400" },
+  css: { id: "css", name: "CSS", Icon: SiCss3, colorClass: "text-sky-300" },
+  javascript: { id: "javascript", name: "JavaScript", Icon: SiJavascript, colorClass: "text-yellow-300" },
+  heroku: { id: "heroku", name: "Heroku", Icon: SiHeroku, colorClass: "text-violet-300" },
+  canvas: { id: "canvas", name: "Canvas", Icon: FaPaintBrush, colorClass: "text-rose-300" },
+  "linear-algebra": { id: "linear-algebra", name: "Linear Algebra", Icon: FaSuperscript, colorClass: "text-indigo-300" },
 };
 
 type ProjectToolIconsProps = {

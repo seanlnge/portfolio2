@@ -35,7 +35,7 @@
       "link": "https://buybetter-seanlnge.replit.app/",
       "image": "buybetter.png",
       "code": "https://github.com/seanlnge/buybetter/tree/master",
-      "tools": ["typescript", "node", "express", "ai"],
+      "tools": ["typescript", "node", "express", "ai", "html", "google-cloud"],
       "tags": ["Products", "Ai", "Backend"]
     },
     "SiteGEN": {
@@ -43,7 +43,7 @@
       "link": "https://github.com/seanlnge/sitegen/blob/main/README.md",
       "image": "sitegen.png",
       "code": "https://github.com/seanlnge/sitegen/tree/master",
-      "tools": ["typescript", "node", "docker", "aws"],
+      "tools": ["typescript", "node"],
       "tags": ["Products", "Infrastructure", "Dev Tools"]
     },
     "Imgscrpr": {
@@ -51,7 +51,7 @@
       "link": "https://top.gg/bot/904018497657532447",
       "image": "imgscrpr.png",
       "code": "https://github.com/seanlnge/imgscrpr/tree/master",
-      "tools": ["typescript", "node", "mongo"],
+      "tools": ["typescript", "node", "mongo", "heroku"],
       "caseStudy": "imgscrpr",
       "tags": ["Products", "Backend"]
     },
@@ -60,23 +60,15 @@
       "link": "https://threespective.replit.app",
       "image": "threespective.png",
       "code": "https://replit.com/@seanlnge/Threespective",
-      "tools": ["typescript", "node"],
+      "tools": ["javascript", "html", "css", "linear-algebra"],
       "tags": ["Games"]
-    },
-    "Roe Bros Pizza": {
-      "description": "Single page website that made for a local pizza company operating in my area. Written in vanilla HTML and CSS.",
-      "link": "https://roe-bros-pizza.replit.app",
-      "image": "roebrospizza.png",
-      "code": "https://replit.com/@seanlnge/Roe-Bros-Pizza",
-      "tools": ["tailwind"],
-      "tags": ["Products", "Frontend"]
     },
     "Renderspice": {
       "description": "A 2D game engine for the web that strictly uses the HTML canvas, and was built in pure Javascript code.",
       "link": "https://renderspice-docs.replit.app/",
       "image": "renderspice.png",
       "code": "https://github.com/seanlnge/Renderspice",
-      "tools": ["typescript", "node"],
+      "tools": ["javascript", "canvas", "linear-algebra"],
       "tags": ["Games", "Dev Tools", "Frontend"]
     },
     "Spicefall": {
@@ -84,7 +76,7 @@
       "link": "https://spicefall.replit.app",
       "image": "spicefall.png",
       "code": "https://replit.com/@seanlnge/Spicefall",
-      "tools": ["typescript", "node", "tailwind"],
+      "tools": ["typescript", "node"],
       "tags": ["Games"]
     },
     "Domain Coloring": {
@@ -92,7 +84,7 @@
       "link": "https://domain-coloring-seanlnge.replit.app",
       "image": "domaincoloring.png",
       "code": "https://replit.com/@seanlnge/Domain-Coloring",
-      "tools": ["react", "typescript", "tailwind"],
+      "tools": ["html", "css", "javascript"],
       "tags": ["Frontend"]
     }
   }

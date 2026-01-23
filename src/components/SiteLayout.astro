@@ -11,9 +11,8 @@ const { title = "Sean Lange", description = "", current = "" } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    {description ? <meta name="description" content={description} /> : null}
+    {description ? <meta name="description" content={description} /> : <meta name="description" content="Full-stack software developer focusing on cloud infrastructure and building production ready end-to-end web applications." />}
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
@@ -28,6 +27,21 @@ const { title = "Sean Lange", description = "", current = "" } = Astro.props;
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://seanlange.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sean Lange">
+    <meta property="og:description" content="Full-stack software developer focusing on cloud infrastructure and building production ready end-to-end web applications.">
+    <meta property="og:image" content="/images/self.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="seanlange.dev">
+    <meta property="twitter:url" content="https://seanlange.dev/">
+    <meta name="twitter:title" content="Sean Lange">
+    <meta name="twitter:description" content="Full-stack software developer focusing on cloud infrastructure and building production ready end-to-end web applications.">
+    <meta name="twitter:image" content="/images/self.jpg">
   </head>
   <body>
     <header>

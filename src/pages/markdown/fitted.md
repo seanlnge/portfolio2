@@ -8,26 +8,12 @@ description: Wardrobe-to-outfit web app that won HackUSF 2025 AI track.
 
 Fitted is a wardrobe-to-outfit web app that won the AI track at HackUSF 2025. It helps people generate outfits based on what they already own, reducing decision fatigue and making it easy to dress for specific occasions.
 
-
 ![Fitted product preview](/images/fitted.png)
 
 ## Links
 
-- Live: [fitted-zeta.vercel.app](https://fitted-zeta.vercel.app)
-- Code: [github.com/outfit-create-projecty/project-y](https://github.com/outfit-create-projecty/project-y)
-
-## Tools
-
-- TypeScript
-- Next.js
-- tRPC
-- Tailwind CSS
-- PostgreSQL (Neon)
-- Drizzle ORM
-- AWS S3 + CloudFront
-- OpenAI GPT-4o mini
-- OpenAI Ada-002 embeddings
-
+- [Live App](https://fitted-zeta.vercel.app)
+- [GitHub Repository](https://github.com/outfit-create-projecty/project-y)
 
 ## Problem
 
