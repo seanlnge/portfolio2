@@ -12,29 +12,31 @@
   "highlights": ["Multyx.io", "Fitted", "Imgscrpr"],
   "projects": {
     "Multyx.io": {
-      "description": "Browser-based multiplayer game development platform that lets beginners build and deploy real-time games without networking knowledge. Includes a typed AST editor, ECS-based hosting on AWS, and a Step Functions provisioning pipeline.",
+      "description": "Multiplayer game dev platform with typed AST editor, ECS hosting on AWS, and Step Functions provisioning. Lets beginners ship real-time games without networking expertise.",
       "link": "https://multyx.io",
       "image": "multyx.png",
       "code": "https://github.com/seanlnge",
-      "tools": ["typescript", "node", "aws", "docker", "postgres", "redis", "ws"],
+      "tools": ["typescript", "next", "aws", "docker", "postgres", "redis", "ws", "tailwind"],
+      "caseStudy": "multyx-io",
       "privateCode": true,
-      "tags": ["Infrastructure", "Products", "Games"]
+      "tags": ["Infrastructure", "Products", "Games", "Dev Tools", "Frontend", "Backend"]
     },
     "Fitted": {
-      "description": "Led a team to win Best Use of AI at the HackUSF 2025 hackathon. Webapp that creates outfits from pictures of a wardrobe. Built with Typescript, AWS S3 & Cloudfront, and Next.js",
+      "description": "Won AI track (1 of 50) at HackUSF 2025. Built a wardrobe-to-outfit webapp using TypeScript, Next.js, and AWS S3/CloudFront.",
       "link": "https://fitted-zeta.vercel.app",
       "image": "fitted.png",
       "code": "https://github.com/outfit-create-projecty/project-y",
-      "tools": ["typescript", "next", "aws", "tailwind"],
-      "tags": ["Products"]
+      "tools": ["typescript", "next", "aws", "tailwind", "ai"],
+      "caseStudy": "fitted",
+      "tags": ["Products", "Ai", "Frontend", "Backend", "Infrastructure"]
     },
     "BuyBetter": {
       "description": "My entry for the ShellHacks 2024 hackathon. Webapp that takes in receipts to find personalized resources assisting in finding cheaper purchase alternatives, made with a vanilla Typescript Node.JS backend.",
       "link": "https://buybetter-seanlnge.replit.app/",
       "image": "buybetter.png",
       "code": "https://github.com/seanlnge/buybetter/tree/master",
-      "tools": ["typescript", "node", "express"],
-      "tags": ["Products"]
+      "tools": ["typescript", "node", "express", "ai"],
+      "tags": ["Products", "Ai", "Backend"]
     },
     "SiteGEN": {
       "description": "Application utilizing webscrapers and OpenAI APIs to automate the creation of a static website using user-provided social media data to customize a diverse range of HTML/CSS templates.",
@@ -42,15 +44,16 @@
       "image": "sitegen.png",
       "code": "https://github.com/seanlnge/sitegen/tree/master",
       "tools": ["typescript", "node", "docker", "aws"],
-      "tags": ["Products", "Infrastructure"]
+      "tags": ["Products", "Infrastructure", "Dev Tools"]
     },
     "Imgscrpr": {
-      "description": "Discord bot creating a personalized and adaptive Reddit feed through an ordered graph of all subreddit relations, with MongoDB, Typescript, and Node.JS under the hood.",
+      "description": "Discord bot that builds a personalized Reddit feed via a subreddit-relationship graph. Implemented with TypeScript, Node.js, and MongoDB.",
       "link": "https://top.gg/bot/904018497657532447",
       "image": "imgscrpr.png",
       "code": "https://github.com/seanlnge/imgscrpr/tree/master",
       "tools": ["typescript", "node", "mongo"],
-      "tags": ["Products"]
+      "caseStudy": "imgscrpr",
+      "tags": ["Products", "Backend"]
     },
     "Threespective": {
       "description": "View three dimensional space in another way through a 2D cross section simulation. Built using linear algebra, height map made with Voronoi cells, and strictly rendering in the HTML5 canvas.",
@@ -66,7 +69,7 @@
       "image": "roebrospizza.png",
       "code": "https://replit.com/@seanlnge/Roe-Bros-Pizza",
       "tools": ["tailwind"],
-      "tags": ["Products"]
+      "tags": ["Products", "Frontend"]
     },
     "Renderspice": {
       "description": "A 2D game engine for the web that strictly uses the HTML canvas, and was built in pure Javascript code.",
@@ -74,7 +77,7 @@
       "image": "renderspice.png",
       "code": "https://github.com/seanlnge/Renderspice",
       "tools": ["typescript", "node"],
-      "tags": ["Games"]
+      "tags": ["Games", "Dev Tools", "Frontend"]
     },
     "Spicefall": {
       "description": "My entry for the Kajam 2022 competition, utilizing the Kaboom game engine and Typescript, and built in under a week.",
@@ -90,7 +93,7 @@
       "image": "domaincoloring.png",
       "code": "https://replit.com/@seanlnge/Domain-Coloring",
       "tools": ["react", "typescript", "tailwind"],
-      "tags": ["Products"]
+      "tags": ["Frontend"]
     }
   }
 }

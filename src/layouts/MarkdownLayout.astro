@@ -1,0 +1,40 @@
+---
+import "../styles/globals.css";
+import "../styles/fonts.css";
+
+const { frontmatter } = Astro.props;
+const title = frontmatter?.title ?? "Case Study";
+const description = frontmatter?.description ?? "";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    {description ? <meta name="description" content={description} /> : null}
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-m-white text-m-black">
+    <main class="w-full">
+      <article class="markdown-content pt-0">
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>

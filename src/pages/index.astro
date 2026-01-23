@@ -5,7 +5,7 @@ import { BubbleBackground } from "../components/aesthetic/bubble";
 import { Button } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ToolIconRows from "../components/ToolIconRows";
-import ProjectToolIcons from "../components/ProjectToolIcons";
+import HighlightedProjects from "../components/HighlightedProjects";
 import { Image } from "astro:assets";
 
 type Project = {
@@ -13,6 +13,7 @@ type Project = {
   link: string;
   image: string;
   code: string;
+  caseStudy?: string;
   tools?: string[];
   privateCode?: boolean;
   tags?: string[];
@@ -49,20 +50,20 @@ const links = Object.entries(projects.links);
 				</div>
 				<div class="font-extrabold font-header text-5xl md:text-6xl xl:text-8xl flex flex-row gap-3 mb-8">
 					<h1 class="z-22 text-m-accent-white mix-blend-difference">Sean</h1>
-					<h1 class="z-21 text-m-white translate-y-3 scale-y-100 -translate-x-4 mix-blend-difference">/</h1>
-					<h1 class="z-22 text-m-accent-light translate-y-6 -translate-x-8 mix-blend-difference">Lange</h1>
+					<h1 class="z-21 text-m-black translate-y-3 scale-y-100 -translate-x-4 mix-blend-difference">/</h1>
+					<h1 class="z-22 text-m-accent-white translate-y-6 -translate-x-8 mix-blend-difference">Lange</h1>
 				</div>
 			</div>
-			<p class="font-normal text-base md:text-lg font-header text-slate-300">Fullstack Software Engineer & Founder</p>
+			<p class="font-normal text-base md:text-lg font-header text-slate-300">Full-stack Software Engineer & Founder</p>
 			<div class="flex flex-row justify-center xl:justify-start gap-4">
-				<a href="/media/resume.pdf" target="_blank" rel="noreferrer">
+				<a href="/projects">
 					<Button className="bg-m-black text-m-white tracking-wide font-semibold w-64 hover:bg-m-primary-white hover:text-m-black duration-300">
-						Resume <ArrowRight className="w-4 h-4" />
+						Projects <ArrowRight className="w-4 h-4" />
 					</Button>
 				</a>
-				<a href="/projects">
+				<a href="/media/resume.pdf" target="_blank" rel="noreferrer">
 					<Button className="bg-m-accent-light text-m-black tracking-wide font-semibold w-64 hover:bg-m-primary-white hover:text-m-black duration-300">
-						Projects <ArrowRight className="w-4 h-4" />
+						Resume <ArrowRight className="w-4 h-4" />
 					</Button>
 				</a>
 			</div>
@@ -73,9 +74,6 @@ const links = Object.entries(projects.links);
 					<a href="https://www.credly.com/badges/89fa5b44-0ae4-4506-91f8-d0c5b1725cf9/public_url" target="_blank" rel="noreferrer" class="w-full h-full block m-0 p-0">
 						<Image src="/images/ibmcloudv6.png" alt="IBM Cloud V6 Certification" width={100} height={100}  class="w-full h-full object-cover" loading="lazy" />
 					</a>
-				</div>
-				<div class="z-30 h-32 w-32 -translate-x-8 translate-y-2 bg-white/80 rounded-2xl shadow-xl cursor-pointer hover:scale-105 duration-300 shadow-black/80 hover:shadow-black">
-					<Image src="/images/ts.png" alt="Typescript Logo" width={100} height={100}  class="rounded-2xl w-full h-full object-cover" />
 				</div>
 			</div>
 			<div class="z-29 w-64 md:w-80 xl:w-[500px] bg-white rounded-2xl h-64 relative flex flex-row gap-0 justify-center items-center">
@@ -94,13 +92,9 @@ const links = Object.entries(projects.links);
 			<div class="space-y-6">
 				<p class="uppercase tracking-[0.35em] text-xs font-semibold text-m-primary-light/80">About</p>
 				<h2 class="font-header text-3xl md:text-4xl xl:text-5xl font-semibold text-m-white">
-					Focused on building thoughtful software.
+					Using complex cloud infrastructure to ship real products.
 				</h2>
-				<p class="text-base md:text-lg text-slate-300 leading-relaxed">
-					I am a sophomore at the University of South Florida, and have been programming for over
-					7 years. I started programming in the summer before 7th grade, and have since focused on
-					building web applications with Node.js and Typescript.
-				</p>
+				<p class="text-base md:text-lg text-slate-300 leading-relaxed">I build production-ready web applications end-to-end, from UI/UX to cloud infrastructure. Most of my work is TypeScript-first (Next.js/Node), backed by AWS services for deployment, scaling, and automation; allowing the product to ship fast and stay reliable.</p>
 			</div>
 			<ToolIconRows client:load />
 		</div>
@@ -124,52 +118,8 @@ const links = Object.entries(projects.links);
 						</Button>
 					</a>
 				</div>
-				<div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-					{highlightProjects.map((project) => (
-						<article class="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-slate-200 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1 hover:shadow-black/40">
-							<div class="relative h-48 w-full overflow-hidden">
-								<img
-									src={`/images/${project.image}`}
-									alt={project.name}
-									class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-								/>
-								<div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent"></div>
-							</div>
-							<div class="flex flex-1 flex-col gap-4 p-6 h-full">
-								<div class="h-full flex flex-col justify-between">
-									<h3 class="text-3xl font-semibold text-m-black font-header">{project.name}</h3>
-									<p class="my-3 text-sm leading-relaxed text-slate-700">{project.description}</p>
-									<div class="mt-auto w-full">
-										<ProjectToolIcons tools={project.tools} />
-									</div>
-								</div>
-								<div class="mt-auto flex flex-wrap items-center gap-3 text-sm font-semibold text-m-black">
-									<a
-										href={project.link}
-										target="_blank"
-										rel="noreferrer"
-										class="rounded-full border border-black/20 bg-m-primary-light/30 font-header px-4 py-2 text-m-black transition duration-300 hover:border-m-black hover:bg-m-primary-light hover:text-m-white"
-									>
-										View Project
-									</a>
-									{project.privateCode ? (
-										<span class="rounded-full border border-black/20 bg-m-primary-light/30 font-header px-4 py-2 text-m-black opacity-50 cursor-not-allowed">
-											Confidential Code
-										</span>
-									) : (
-										<a
-											href={project.code}
-											target="_blank"
-											rel="noreferrer"
-											class="rounded-full border border-black/20 bg-m-primary-light/30 font-header px-4 py-2 text-m-black transition duration-300 hover:border-m-black hover:bg-m-primary-light hover:text-m-white"
-										>
-											View Code
-										</a>
-									)}
-								</div>
-							</div>
-						</article>
-					))}
+				<div class="mt-12">
+					<HighlightedProjects projects={highlightProjects} client:load />
 				</div>
 			</div>
 		</div>
