@@ -52,29 +52,6 @@ function BubbleBackground({
   const rectRef = React.useRef<DOMRect | null>(null);
   const rafIdRef = React.useRef<number | null>(null);
 
-  React.useLayoutEffect(() => {
-    const updateRect = () => {
-      if (containerRef.current) {
-        rectRef.current = containerRef.current.getBoundingClientRect();
-      }
-    };
-
-    updateRect();
-
-    const el = containerRef.current;
-    const ro = new ResizeObserver(updateRect);
-    if (el) ro.observe(el);
-
-    window.addEventListener('resize', updateRect);
-    window.addEventListener('scroll', updateRect, { passive: true });
-
-    return () => {
-      ro.disconnect();
-      window.removeEventListener('resize', updateRect);
-      window.removeEventListener('scroll', updateRect);
-    };
-  }, []);
-
   React.useEffect(() => {
     if (!interactive) return;
 
