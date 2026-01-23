@@ -1,0 +1,43 @@
+---
+import "../styles/globals.css";
+import "../styles/fonts.css";
+import Nav from "./Nav.astro";
+
+const { title = "Sean Lange", description = "", current = "" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    {description ? <meta name="description" content={description} /> : null}
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <Nav current={current} />
+    </header>
+    <main class="w-full">
+      <slot />
+    </main>
+    <footer class="container footer">
+      <p>© {new Date().getFullYear()} Sean Lange</p>
+    </footer>
+  </body>
+</html>

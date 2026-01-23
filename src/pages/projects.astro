@@ -1,0 +1,46 @@
+---
+import SiteLayout from "../components/SiteLayout.astro";
+import projectsData from "../data/projects.json";
+
+type Project = {
+  description: string;
+  link: string;
+  image: string;
+  code: string;
+};
+
+type ProjectsData = {
+  projects: Record<string, Project>;
+};
+
+const projects = projectsData as ProjectsData;
+const entries = Object.entries(projects.projects);
+---
+
+<SiteLayout
+  title="Projects | Sean Lange"
+  description="Projects by Sean Lange."
+  current="projects"
+>
+  <section class="page-header">
+    <h1>Projects</h1>
+    <p>Selected work, experiments, and hackathon builds.</p>
+  </section>
+
+  <section class="project-grid">
+    {entries.map(([name, project]) => (
+      <article class="project-card">
+        <img src={`/images/${project.image}`} alt={name} />
+        <div>
+          <h3>{name}</h3>
+          <p>{project.description}</p>
+          <div class="project-links">
+            <a href={project.link} target="_blank" rel="noreferrer">View Project</a>
+            <span>·</span>
+            <a href={project.code} target="_blank" rel="noreferrer">View Code</a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+</SiteLayout>
