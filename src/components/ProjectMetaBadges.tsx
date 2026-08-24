@@ -1,17 +1,18 @@
 import { Trophy } from "lucide-react";
-import { builtYear } from "../lib/projects";
+import { builtYear, isAiProject } from "../lib/projects";
 
 type ProjectMetaBadgesProps = {
+  name: string;
   built: string;
   hackathonWin?: boolean;
-  ai?: boolean;
 };
 
 const badgeClassName =
   "flex h-8 items-center justify-center border border-black/20 px-2 font-header text-[11px] font-bold tracking-wide text-m-black";
 
-const ProjectMetaBadges = ({ built, hackathonWin, ai }: ProjectMetaBadgesProps) => {
+const ProjectMetaBadges = ({ name, built, hackathonWin }: ProjectMetaBadgesProps) => {
   const year = builtYear(built);
+  const ai = isAiProject(name, built);
 
   return (
     <ul className="flex shrink-0 flex-wrap justify-end gap-1">

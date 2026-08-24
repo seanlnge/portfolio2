@@ -12,7 +12,6 @@ export type Project = {
   tags?: string[];
   built: string;
   hackathonWin?: boolean;
-  ai?: boolean;
 };
 
 const monthFormatter = new Intl.DateTimeFormat("en-US", {
@@ -31,4 +30,12 @@ export function builtYear(built: string): string {
 
 export function compareBuiltDesc(a: string, b: string): number {
   return b.localeCompare(a);
+}
+
+export function isAiProject(name: string, built: string): boolean {
+  if (name === "Multyx.io") {
+    return false;
+  }
+
+  return Number(builtYear(built)) >= 2025;
 }

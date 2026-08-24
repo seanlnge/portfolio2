@@ -17,7 +17,6 @@
       "image": "kalorie.png",
       "code": "https://github.com/seanlnge/kalorie",
       "built": "2026-05",
-      "ai": true,
       "tools": ["python", "ai", "typescript", "next", "postgres"],
       "tags": ["Products", "Ai", "Backend", "Infrastructure"]
     },
@@ -28,7 +27,6 @@
       "caseStudy": "bitflip",
       "built": "2026-04",
       "hackathonWin": true,
-      "ai": true,
       "tools": ["python", "ai", "next", "react", "tailwind"],
       "privateCode": true,
       "tags": ["Products", "Ai", "Infrastructure", "Frontend"]
@@ -62,7 +60,6 @@
       "code": "https://github.com/outfit-create-projecty/project-y",
       "built": "2025-04",
       "hackathonWin": true,
-      "ai": true,
       "tools": ["typescript", "next", "aws", "tailwind", "ai"],
       "tags": ["Products", "Ai", "Frontend", "Backend", "Infrastructure"]
     },
@@ -72,7 +69,6 @@
       "image": "buybetter.png",
       "code": "https://github.com/seanlnge/buybetter/tree/master",
       "built": "2024-09",
-      "ai": true,
       "tools": ["typescript", "node", "express", "ai", "html", "google-cloud"],
       "tags": ["Products", "Ai", "Backend"]
     },
@@ -82,7 +78,6 @@
       "image": "sitegen.png",
       "code": "https://github.com/seanlnge/sitegen/tree/master",
       "built": "2024-08",
-      "ai": true,
       "tools": ["typescript", "node"],
       "tags": ["Products", "Infrastructure", "Dev Tools"]
     },

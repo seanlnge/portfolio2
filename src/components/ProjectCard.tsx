@@ -17,7 +17,6 @@ type ProjectCardProps = {
   caseStudy?: string;
   built: string;
   hackathonWin?: boolean;
-  ai?: boolean;
   onOpenCaseStudy?: (projectName: string, caseStudySlug: string) => void;
 };
 
@@ -39,7 +38,6 @@ const ProjectCard = ({
   caseStudy,
   built,
   hackathonWin,
-  ai,
   onOpenCaseStudy,
 }: ProjectCardProps) => {
   const imageSrc = image.startsWith("/") || image.startsWith("http") || image.startsWith("data:") ? image : `/images/${image}`;
@@ -75,9 +73,11 @@ const ProjectCard = ({
           </div>
           <p className="text-sm leading-6 text-slate-200">{description}</p>
         </div>
-        <div className="mt-auto flex items-end justify-between gap-2">
-          <ProjectToolIcons tools={tools} />
-          <ProjectMetaBadges built={built} hackathonWin={hackathonWin} ai={ai} />
+        <div className="mt-auto flex items-end gap-2">
+          <div className="min-w-0 flex-1">
+            <ProjectToolIcons tools={tools} />
+          </div>
+          <ProjectMetaBadges name={name} built={built} hackathonWin={hackathonWin} />
         </div>
       </div>
       <div className={`grid ${gridCols} border-t border-white/12`}>
