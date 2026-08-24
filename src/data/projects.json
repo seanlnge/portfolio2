@@ -9,8 +9,35 @@
       "image": "github.png"
     }
   },
-  "highlights": ["Multyx.io", "Fitted", "Imgscrpr"],
+  "highlights": ["Kalorie", "Bitflip", "Multyx.io"],
   "projects": {
+    "Kalorie": {
+      "description": "Kalshi trading system for earnings-mention markets. The model has a better Brier score than the live market inside a 95% confidence interval.",
+      "link": "https://kalorie-omega.vercel.app",
+      "image": "kalorie.png",
+      "code": "https://github.com/seanlnge/kalorie",
+      "tools": ["python", "ai", "typescript", "next", "postgres"],
+      "tags": ["Products", "Ai", "Backend", "Infrastructure"]
+    },
+    "Bitflip": {
+      "description": "Space weather and radiation forecasting for proactive bit-flip mitigation. First place and $1500 at the Groundswell Startups Space Coast Initiative hackathon.",
+      "image": "bitflip.jpg",
+      "code": "https://github.com/seanlnge",
+      "caseStudy": "bitflip",
+      "tools": ["python", "ai", "next", "react", "tailwind"],
+      "privateCode": true,
+      "tags": ["Products", "Ai", "Infrastructure", "Frontend"]
+    },
+    "GameLamp": {
+      "description": "Game Pigeon-style tic-tac-toe and Connect 4 over SMS. Each turn is a CloudFront link whose iMessage preview is the live board.",
+      "link": "https://d3spvqcd90i9d.cloudfront.net/",
+      "image": "gamelamp.png",
+      "code": "https://github.com/seanlnge/gamelamp",
+      "caseStudy": "gamelamp",
+      "tools": ["typescript", "react", "aws"],
+      "privateCode": true,
+      "tags": ["Games", "Products", "Frontend", "Infrastructure"]
+    },
     "Multyx.io": {
       "description": "Multiplayer game dev platform with typed AST editor, ECS hosting on AWS, and Step Functions provisioning. Lets beginners ship real-time games without networking expertise.",
       "link": "https://multyx.io",
@@ -27,7 +54,6 @@
       "image": "fitted.png",
       "code": "https://github.com/outfit-create-projecty/project-y",
       "tools": ["typescript", "next", "aws", "tailwind", "ai"],
-      "caseStudy": "fitted",
       "tags": ["Products", "Ai", "Frontend", "Backend", "Infrastructure"]
     },
     "BuyBetter": {

@@ -3,13 +3,18 @@ import SiteLayout from "../components/SiteLayout.astro";
 import projectsData from "../data/projects.json";
 import ProjectsGrid from "../components/ProjectsGrid";
 import { BubbleBackground } from "../components/aesthetic/bubble";
-import { Button } from "../components/ui/button";
+import { buttonVariants } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { cn } from "../lib/utils";
+import { withOptimizedProjectImages } from "../lib/optimize-images";
 
 type Project = {
   description: string;
-  link: string;
+  link?: string;
   image: string;
+  imageSrcSet?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   code: string;
   caseStudy?: string;
   tools?: string[];
@@ -24,11 +29,12 @@ type ProjectsData = {
 };
 
 const projects = projectsData as ProjectsData;
+const optimizedProjects = await withOptimizedProjectImages(projects.projects);
 ---
 
 <SiteLayout title="Projects | Sean Lange" description="Highlighted and full project list." current="projects">
 	<section class="bg-black w-full min-h-[60vh] flex flex-col items-center text-m-white border-m-primary-light relative overflow-hidden">
-		<BubbleBackground interactive={true} className="h-full w-full opacity-40 absolute top-0 left-0 z-10" />
+		<BubbleBackground client:load interactive={true} className="pointer-events-none h-full w-full opacity-40 absolute inset-0 z-10" />
 		<div class="relative z-20 w-full max-w-6xl px-6 md:px-12 lg:px-16 py-24 md:py-28">
 			<div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
 				<div class="space-y-4 max-w-2xl">
@@ -45,15 +51,19 @@ const projects = projectsData as ProjectsData;
 				</div>
 				<div class="flex flex-col gap-3">
 					
-					<a href="/contact">
-						<Button className="bg-m-primary-white text-m-black tracking-wide font-semibold w-48 hover:bg-m-white hover:text-m-black duration-300">
-							Contact <ArrowRight className="w-4 h-4" />
-						</Button>
+					<a
+						href="/contact"
+						class={cn(buttonVariants(), "bg-m-primary-white text-m-black tracking-wide font-semibold w-48 hover:bg-m-white hover:text-m-black duration-300")}
+					>
+						Contact <ArrowRight className="w-4 h-4" />
 					</a>
-					<a href="/media/resume.pdf" target="_blank" rel="noreferrer">
-						<Button className="bg-m-black text-m-white tracking-wide font-semibold w-48 hover:bg-m-primary-white hover:text-m-black duration-300">
-							Resume <ArrowRight className="w-4 h-4" />
-						</Button>
+					<a
+						href="/media/resume.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+						class={cn(buttonVariants(), "bg-m-black text-m-white tracking-wide font-semibold w-48 hover:bg-m-primary-white hover:text-m-black duration-300")}
+					>
+						Resume <ArrowRight className="w-4 h-4" />
 					</a>
 				</div>
 			</div>
@@ -63,7 +73,7 @@ const projects = projectsData as ProjectsData;
 	<section class="relative z-30 overflow-hidden bg-slate-900">
 		<div class="relative z-10 px-6 md:px-12 lg:px-16 py-20 md:py-28">
 			<div class="max-w-6xl mx-auto">
-				<ProjectsGrid projects={projects.projects} highlights={projects.highlights} client:load />
+				<ProjectsGrid projects={optimizedProjects} highlights={projects.highlights} client:load />
 			</div>
 		</div>
 	</section>

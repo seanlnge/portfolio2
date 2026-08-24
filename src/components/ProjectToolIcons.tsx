@@ -14,6 +14,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
+  SiPython,
   SiReact,
   SiRedis,
   SiSocketdotio,
@@ -50,6 +51,7 @@ const toolMap: Record<string, ToolItem> = {
   docker: { id: "docker", name: "Docker", Icon: SiDocker, colorClass: "text-sky-400" },
   cicd: { id: "cicd", name: "CI/CD", Icon: SiGithubactions, colorClass: "text-violet-300" },
   postgres: { id: "postgres", name: "PostgreSQL", Icon: SiPostgresql, colorClass: "text-indigo-300" },
+  python: { id: "python", name: "Python", Icon: SiPython, colorClass: "text-yellow-300" },
   redis: { id: "redis", name: "Redis", Icon: SiRedis, colorClass: "text-rose-300" },
   mongo: { id: "mongo", name: "MongoDB", Icon: SiMongodb, colorClass: "text-emerald-300" },
   git: { id: "git", name: "Git", Icon: SiGit, colorClass: "text-orange-300" },
@@ -74,20 +76,18 @@ const ProjectToolIcons = ({ tools = [] }: ProjectToolIconsProps) => {
   }
 
   return (
-    <div className="flex items-center -space-x-3 overflow-visible pb-2">
+    <ul className="flex flex-wrap gap-1">
       {toolItems.map((item) => (
-        <span key={item.id} className="group/spec relative flex items-center hover:z-20 mr-0">
+        <li key={item.id} title={item.name}>
           <span
-            className={`h-10 px-2.5 rounded-full border border-m-primary-light bg-m-primary-ultradark ring-2 ring-m-primary-black/80 flex items-center justify-center ${item.colorClass}`}
+            className={`flex h-8 w-8 items-center justify-center border border-white/15 bg-m-primary-ultradark ${item.colorClass}`}
           >
-            <item.Icon className="h-5 w-5" />
-            <span className="whitespace-nowrap text-sm font-semibold font-header text-m-white duration-300 transition-all ease-out w-0 opacity-0 ml-0 group-hover/spec:w-auto group-hover/spec:opacity-100 group-hover/spec:ml-2">
-              {item.name}
-            </span>
+            <item.Icon className="h-4 w-4" aria-hidden />
+            <span className="sr-only">{item.name}</span>
           </span>
-        </span>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

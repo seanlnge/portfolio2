@@ -1,11 +1,12 @@
 ---
 const { current = "" } = Astro.props;
 import { Image } from "astro:assets";
+import selfPortrait from "../assets/images/self.jpg";
 ---
 
 <nav class="group/navvy fixed w-full h-16 bg-transparent z-50! p-4 backdrop-blur-lg hover:backdrop-blur-2xl flex justify-center items-center font-header text-slate-300 hover:text-white hover:bg-m-primary-black/10 transition-all duration-300">
   <div class="absolute hidden md:flex left-6 top-1/2 -translate-y-1/2 items-center gap-2 transition duration-500 grayscale group-hover/navvy:grayscale-0">
-    <Image src="/images/self.jpg" alt="Sean Lange" width={40} height={40} class="rounded-full w-10 h-10 object-cover" />
+    <Image src={selfPortrait} alt="Sean Lange" width={40} height={40} densities={[2]} format="webp" quality={70} class="rounded-full w-10 h-10 object-cover" />
     <p class="text-sm font-semibold font-header">Sean Lange</p>
   </div>
   <div class="flex items-center gap-8">
@@ -18,7 +19,7 @@ import { Image } from "astro:assets";
       class="text-[#0A66C2] transition-colors duration-200"
       href="https://www.linkedin.com/in/seanlnge"
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label="LinkedIn"
     >
       <svg class="h-5 w-5 text-[#0A66C2]" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
@@ -29,7 +30,7 @@ import { Image } from "astro:assets";
       class=""
       href="https://github.com/seanlnge"
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label="GitHub"
     >
       <svg class="h-5 w-5 text-[#6e5494]" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
@@ -40,7 +41,7 @@ import { Image } from "astro:assets";
       class=""
       href="https://instagram.com/_seanlange"
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label="Instagram"
     >
       <svg class="h-5 w-5 text-[#E4405F]" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">

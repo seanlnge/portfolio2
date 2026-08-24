@@ -72,7 +72,7 @@ const CaseStudyDialog = ({
 
   return (
     <Dialog open={true} onOpenChange={(open) => (!open ? onClose() : null)}>
-      <DialogContent className="max-w-3xl rounded-3xl bg-m-white p-0 text-m-black shadow-2xl [&>button]:hidden">
+      <DialogContent className="max-w-3xl rounded-none sm:rounded-none bg-m-white p-0 text-m-black shadow-2xl [&>button]:hidden">
         <DialogHeader className="flex-row items-center justify-between border-b border-black/10 px-6 py-4">
           <DialogTitle className="text-xl font-semibold font-header">
             {projectName}
@@ -81,7 +81,7 @@ const CaseStudyDialog = ({
             <button
               type="button"
               aria-label="Close case study"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-black/20 text-m-black transition duration-300 hover:border-m-black hover:bg-m-primary-light hover:text-m-white"
+              className="flex h-8 w-8 items-center justify-center border border-black/20 text-m-black transition duration-300 hover:border-m-black hover:bg-m-primary-light hover:text-m-white"
             >
               <X className="h-4 w-4" />
             </button>
@@ -93,7 +93,12 @@ const CaseStudyDialog = ({
           ) : error ? (
             <p>{error}</p>
           ) : (
-            <iframe src={`/markdown/${slug}`} className="w-full h-[60vh] select-none" />
+            <iframe
+              src={`/markdown/${slug}`}
+              title={`${projectName} case study`}
+              className="w-full h-[60vh] select-none"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           )}
         </div>
       </DialogContent>

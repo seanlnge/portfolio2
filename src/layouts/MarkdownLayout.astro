@@ -14,6 +14,7 @@ const description = frontmatter?.description ?? "";
     <meta name="generator" content={Astro.generator} />
     {description ? <meta name="description" content={description} /> : null}
     <title>{title}</title>
+    <base target="_blank" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link
@@ -36,5 +37,13 @@ const description = frontmatter?.description ?? "";
         <slot />
       </article>
     </main>
+    <script>
+      document.querySelectorAll("a[href]").forEach((anchor) => {
+        const href = anchor.getAttribute("href") ?? "";
+        if (href.startsWith("#") || href.startsWith("mailto:")) return;
+        anchor.setAttribute("target", "_blank");
+        anchor.setAttribute("rel", "noopener noreferrer");
+      });
+    </script>
   </body>
 </html>
