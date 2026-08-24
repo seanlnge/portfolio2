@@ -30,7 +30,7 @@ const ProjectMetaBadges = ({ name, built, hackathonWin }: ProjectMetaBadgesProps
         </li>
       ) : (
         <li title="Pre-AI">
-          <span className={`${badgeClassName} bg-m-accent-light`}>pre-ai</span>
+          <span className={`${badgeClassName} bg-m-accent-light`}>Pre-AI</span>
         </li>
       )}
       <li title={year}>

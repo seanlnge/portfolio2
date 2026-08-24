@@ -23,12 +23,11 @@
     "Bitflip": {
       "description": "Space weather and radiation forecasting for proactive bit-flip mitigation. First place and $1500 at the Groundswell Startups Space Coast Initiative hackathon.",
       "image": "bitflip.jpg",
-      "code": "https://github.com/seanlnge",
+      "code": "https://github.com/ackberry/aegis",
       "caseStudy": "bitflip",
       "built": "2026-04",
       "hackathonWin": true,
       "tools": ["python", "ai", "next", "react", "tailwind"],
-      "privateCode": true,
       "tags": ["Products", "Ai", "Infrastructure", "Frontend"]
     },
     "GameLamp": {
