@@ -9,23 +9,10 @@ import ToolIconRows from "../components/ToolIconRows";
 import HighlightedProjects from "../components/HighlightedProjects";
 import { Image } from "astro:assets";
 import { withOptimizedProjectImages } from "../lib/optimize-images";
+import type { Project } from "../lib/projects";
 import selfPortrait from "../assets/images/self.jpg";
 import ibmCloudBadge from "../assets/images/ibmcloudv6.png";
 import hackathonAwards from "../assets/images/hackathon.png";
-
-type Project = {
-  description: string;
-  link?: string;
-  image: string;
-  imageSrcSet?: string;
-  imageWidth?: number;
-  imageHeight?: number;
-  code: string;
-  caseStudy?: string;
-  tools?: string[];
-  privateCode?: boolean;
-  tags?: string[];
-};
 
 type ProjectsData = {
   links: Record<string, { link: string; image: string }>;
@@ -57,7 +44,7 @@ const links = Object.entries(projects.links);
 				<div class="mx-auto xl:mx-0 h-32 w-32 md:h-40 md:w-40 md:-translate-x-4 translate-y-8 scale-175 rounded-full shadow-lg overflow-hidden bg-m-black/40">
 					<Image src={selfPortrait} alt="Sean Lange portrait" width={320} height={320} densities={[1, 2]} format="webp" quality={70} class="h-full w-full object-cover" />
 				</div>
-				<div class="font-extrabold font-header text-5xl md:text-6xl xl:text-8xl flex flex-row gap-3 mb-8">
+				<div class="font-bold font-header text-5xl md:text-6xl xl:text-8xl flex flex-row gap-3 mb-8">
 					<h1 class="z-22 text-m-accent-white translate-x-4 lg:translate-x-0 mix-blend-difference">Sean</h1>
 					<h1 class="z-21 text-m-black translate-y-3 scale-y-100 lg:-translate-x-4 mix-blend-difference">/</h1>
 					<h1 class="z-22 text-m-accent-white -translate-x-4 translate-y-6 lg:-translate-x-8 mix-blend-difference">Lange</h1>
@@ -111,7 +98,7 @@ const links = Object.entries(projects.links);
 				</h2>
 				<p class="text-base md:text-lg text-slate-300 leading-relaxed">I build production-ready web applications end-to-end, from UI/UX to cloud infrastructure. Most of my work is TypeScript-first (Next.js/Node), backed by AWS services for deployment, scaling, and automation; allowing the product to ship fast and stay reliable.</p>
 			</div>
-			<ToolIconRows client:load />
+			<ToolIconRows />
 		</div>
 	</section>
 	<section class="relative z-30 overflow-hidden bg-linear-to-b from-m-primary-black to-m-primary-dark">

@@ -1,20 +1,7 @@
 import { useMemo, useState } from "react";
+import { compareBuiltDesc, type Project } from "../lib/projects";
 import CaseStudyDialog from "./CaseStudyDialog";
 import ProjectCard from "./ProjectCard";
-
-type Project = {
-  description: string;
-  link?: string;
-  image: string;
-  imageSrcSet?: string;
-  imageWidth?: number;
-  imageHeight?: number;
-  code: string;
-  caseStudy?: string;
-  tools?: string[];
-  privateCode?: boolean;
-  tags?: string[];
-};
 
 type ProjectsGridProps = {
   projects: Record<string, Project>;
@@ -31,7 +18,10 @@ const ProjectsGrid = ({ projects }: ProjectsGridProps) => {
     slug: string;
   } | null>(null);
   const entries = useMemo(
-    () => Object.entries(projects).map(([name, project]) => ({ name, ...project })),
+    () =>
+      Object.entries(projects)
+        .map(([name, project]) => ({ name, ...project }))
+        .sort((a, b) => compareBuiltDesc(a.built, b.built)),
     [projects]
   );
 

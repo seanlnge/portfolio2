@@ -1,24 +1,10 @@
 import { useState } from "react";
+import type { Project } from "../lib/projects";
 import CaseStudyDialog from "./CaseStudyDialog";
 import ProjectCard from "./ProjectCard";
 
-type HighlightedProject = {
-  name: string;
-  description: string;
-  link?: string;
-  image: string;
-  imageSrcSet?: string;
-  imageWidth?: number;
-  imageHeight?: number;
-  code: string;
-  tools?: string[];
-  privateCode?: boolean;
-  tags?: string[];
-  caseStudy?: string;
-};
-
 type HighlightedProjectsProps = {
-  projects: HighlightedProject[];
+  projects: Array<Project & { name: string }>;
 };
 
 const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {

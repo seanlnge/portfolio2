@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { IconType } from "react-icons";
 import {
   SiAuth0,

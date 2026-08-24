@@ -7,20 +7,7 @@ import { buttonVariants } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "../lib/utils";
 import { withOptimizedProjectImages } from "../lib/optimize-images";
-
-type Project = {
-  description: string;
-  link?: string;
-  image: string;
-  imageSrcSet?: string;
-  imageWidth?: number;
-  imageHeight?: number;
-  code: string;
-  caseStudy?: string;
-  tools?: string[];
-  privateCode?: boolean;
-  tags?: string[];
-};
+import type { Project } from "../lib/projects";
 
 type ProjectsData = {
   links: Record<string, { link: string; image: string }>;

@@ -1,78 +1,15 @@
 @font-face {
     font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-Light.ttf') format('truetype');
-    font-weight: 300;
+    src: url('/fonts/chakrapetch/ChakraPetch-Regular.woff2') format('woff2');
+    font-weight: 100 499;
     font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-Italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-SemiBoldItalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'chakra-petch';
-    src: url('/fonts/chakrapetch/ChakraPetch-BoldItalic.ttf') format('truetype');
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'chocolate';
-    src: url('/fonts/chocolate/ChocolateClassicalSans-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-family: 'chakra-petch';
+    src: url('/fonts/chakrapetch/ChakraPetch-Bold.woff2') format('woff2');
+    font-weight: 500 900;
     font-style: normal;
     font-display: swap;
 }

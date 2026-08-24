@@ -1,3 +1,5 @@
+import { formatBuiltMonthYear } from "../lib/projects";
+import ProjectMetaBadges from "./ProjectMetaBadges";
 import ProjectToolIcons from "./ProjectToolIcons";
 
 type ProjectCardProps = {
@@ -13,6 +15,9 @@ type ProjectCardProps = {
   tools?: string[];
   privateCode?: boolean;
   caseStudy?: string;
+  built: string;
+  hackathonWin?: boolean;
+  ai?: boolean;
   onOpenCaseStudy?: (projectName: string, caseStudySlug: string) => void;
 };
 
@@ -32,6 +37,9 @@ const ProjectCard = ({
   tools,
   privateCode,
   caseStudy,
+  built,
+  hackathonWin,
+  ai,
   onOpenCaseStudy,
 }: ProjectCardProps) => {
   const imageSrc = image.startsWith("/") || image.startsWith("http") || image.startsWith("data:") ? image : `/images/${image}`;
@@ -56,14 +64,21 @@ const ProjectCard = ({
       </div>
       <div className="flex flex-1 flex-col gap-4 p-5">
         <div className="space-y-2">
-          <h3 className="font-header text-xl font-semibold text-m-white">{name}</h3>
+          <div className="flex items-baseline justify-between gap-3">
+            <h3 className="font-header text-xl font-semibold text-m-white">{name}</h3>
+            <time
+              dateTime={built}
+              className="shrink-0 font-header text-xs font-semibold uppercase tracking-wide text-slate-400"
+            >
+              {formatBuiltMonthYear(built)}
+            </time>
+          </div>
           <p className="text-sm leading-6 text-slate-200">{description}</p>
         </div>
-        {tools && tools.length > 0 && (
-          <div className="mt-auto">
-            <ProjectToolIcons tools={tools} />
-          </div>
-        )}
+        <div className="mt-auto flex items-end justify-between gap-2">
+          <ProjectToolIcons tools={tools} />
+          <ProjectMetaBadges built={built} hackathonWin={hackathonWin} ai={ai} />
+        </div>
       </div>
       <div className={`grid ${gridCols} border-t border-white/12`}>
         {caseStudy && (

@@ -7,7 +7,7 @@
 
 :root {
   color-scheme: light;
-  font-family: "Raleway", "Roboto", "Montserrat", "Lato", system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   color: #1b1b1b;
   background-color: #f6f6f6;
   --m-primary: 270 70% 50%;
@@ -36,6 +36,7 @@
     --m-black: 180 50% 5%;
 
     --m-primary-blueshift: 207 95% 8%;
+    --gold: 43 82% 52%;
 
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -261,7 +262,7 @@ img {
 
 @theme inline {
   --font-sans:
-    'chocolate', ui-sans-serif, system-ui, sans-serif,
+    ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-header:
     'chakra-petch', ui-sans-serif, system-ui, sans-serif,
@@ -333,6 +334,7 @@ img {
   --color-m-grey: hsl(var(--m-grey));
 
   --color-m-black: hsl(var(--m-black));
+  --color-gold: hsl(var(--gold));
 }
 
 .dark {
